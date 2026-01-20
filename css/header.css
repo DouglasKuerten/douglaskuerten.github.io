@@ -1,0 +1,138 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background: rgba(11, 15, 23, .55);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    position: relative;
+}
+
+@media (min-width: 901px) {
+    .nav {
+        justify-content: flex-end;
+        gap: 0;
+    }
+
+    .brand {
+        margin-right: auto;
+        order: 1;
+    }
+
+    .burger {
+        margin-left: 0;
+        order: 3;
+    }
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.brand .logo {
+    height: 28px;
+}
+
+.brand .logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.brand span {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600
+}
+
+.burger {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: transform .2s ease;
+    position: relative;
+    padding: 8px;
+}
+
+.burger:hover {
+    transform: translateY(-1px);
+}
+
+.burger:active {
+    transform: scale(0.95);
+}
+
+.burger.active {
+    animation: burgerClick 0.3s ease;
+}
+
+@keyframes burgerClick {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9) rotate(90deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.burger-lines {
+    width: 18px;
+    height: 12px;
+    position: relative
+}
+
+.burger-lines span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(233, 238, 252, .9);
+    transition: transform .25s ease, top .25s ease, opacity .2s ease;
+}
+
+.burger-lines span:nth-child(1) {
+    top: 0
+}
+
+.burger-lines span:nth-child(2) {
+    top: 5px
+}
+
+.burger-lines span:nth-child(3) {
+    top: 10px
+}
+
+body.menu-open .burger-lines span:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg)
+}
+
+body.menu-open .burger-lines span:nth-child(2) {
+    opacity: 0
+}
+
+body.menu-open .burger-lines span:nth-child(3) {
+    top: 5px;
+    transform: rotate(-45deg)
+}

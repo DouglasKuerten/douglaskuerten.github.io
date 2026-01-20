@@ -1,0 +1,133 @@
+#education {
+    padding: 80px 0;
+}
+
+.education-header-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.education-wrapper {
+    margin-top: 0;
+}
+
+.education-item {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    padding: 32px 0;
+    transition: all .3s ease;
+}
+
+.education-timeline {
+    position: relative;
+    flex-shrink: 0;
+    width: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-timeline .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(124, 92, 255, .8), rgba(51, 214, 255, .6));
+    border: 3px solid rgba(11, 15, 23, 1);
+    box-shadow: 0 0 0 2px rgba(124, 92, 255, .3);
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.education-content-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+.education-header {
+    margin-bottom: 16px;
+}
+
+.education-title h3 {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 6px;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+}
+
+.education-title .institution {
+    display: inline-block;
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 500;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, .04);
+    border-radius: 6px;
+    border: 1px solid var(--line);
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.education-content p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 15px;
+}
+
+.education-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(124, 92, 255, .2);
+}
+
+.education-item:hover .education-title h3 {
+    color: rgba(124, 92, 255, .9);
+}
+
+.education-illustration {
+    position: absolute;
+    right: 0;
+    top: -120px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.education-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .education-illustration {
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    #education {
+        padding: 60px 0;
+    }
+
+    .education-illustration {
+        position: static;
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        margin-bottom: 24px;
+    }
+
+    .education-item {
+        padding: 24px 0;
+    }
+}

@@ -1,0 +1,19 @@
+.hero h1 {
+    margin: 14px 0 10px;
+    font-size: clamp(50px, 4vw, 75px);
+    line-height: 1.05;
+    letter-spacing: -.8px;
+}
+
+.hero p {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
