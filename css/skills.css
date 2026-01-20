@@ -36,6 +36,37 @@
     border-right: 1px solid var(--line);
 }
 
+@media (max-width: 480px) {
+    .skill {
+        min-width: 160px;
+        padding: 16px;
+        padding-right: 24px;
+        gap: 12px;
+    }
+
+    .skill .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill strong {
+        font-size: 14px;
+    }
+
+    .skill span {
+        font-size: 11px;
+    }
+
+    .carousel {
+        gap: 8px;
+    }
+
+    .carousel .iconbtn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 .skill:last-child {
     border-right: none;
     padding-right: 18px;

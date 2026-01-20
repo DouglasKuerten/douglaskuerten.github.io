@@ -84,6 +84,10 @@ footer {
         gap: 40px;
     }
 
+    .footer-left {
+        gap: 24px;
+    }
+
     .footer-right {
         justify-content: flex-start;
     }
@@ -101,5 +105,41 @@ footer {
     .footer-buttons .btn {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 48px 0 32px;
+    }
+
+    .footer-content {
+        gap: 32px;
+    }
+
+    .footer-left {
+        gap: 20px;
+    }
+
+    .footer-title {
+        font-size: clamp(28px, 7vw, 40px);
+    }
+
+    .footer-social {
+        gap: 12px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-buttons {
+        gap: 12px;
     }
 }

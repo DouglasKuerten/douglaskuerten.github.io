@@ -136,9 +136,9 @@
         padding: 60px 0;
     }
 
-
     .experience-item {
         padding: 24px 0;
+        gap: 16px;
     }
 
     .experience-header {
@@ -149,5 +149,37 @@
     .experience-period {
         white-space: normal;
         align-self: flex-start;
+    }
+
+    .experience-timeline {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #work-experience {
+        padding: 48px 0;
+    }
+
+    .experience-item {
+        padding: 20px 0;
+        gap: 12px;
+    }
+
+    .experience-title h3 {
+        font-size: clamp(18px, 5vw, 22px);
+    }
+
+    .experience-content p {
+        font-size: 14px;
+    }
+
+    .experience-timeline {
+        width: 18px;
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
     }
 }

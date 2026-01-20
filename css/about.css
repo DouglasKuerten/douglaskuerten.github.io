@@ -1,8 +1,25 @@
+#about {
+    position: relative;
+    overflow: visible;
+}
+
+#about .container {
+    position: relative;
+    overflow: visible;
+}
+
 .section-title {
     margin: 16px 0 10px;
     font-size: clamp(40px, 3.5vw, 56px);
     letter-spacing: -.4px;
     line-height: 1.1;
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        margin: 12px 0 8px;
+        font-size: clamp(32px, 8vw, 40px);
+    }
 }
 
 .subsection-title {
@@ -20,12 +37,21 @@
     gap: 40px;
     align-items: start;
     margin-top: 24px;
+    position: relative;
+    overflow: visible;
 }
 
 @media (max-width: 900px) {
     .about-content {
         grid-template-columns: 1fr;
         gap: 24px;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        gap: 20px;
     }
 }
 
@@ -43,6 +69,12 @@
     max-width: 100%;
     overflow: hidden;
     margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+    #about .card {
+        margin-top: 0;
+    }
 }
 
 #about .card p {
@@ -63,6 +95,17 @@
     overflow: hidden;
 }
 
+@media (max-width: 480px) {
+    .skills-inline {
+        margin-top: 24px;
+    }
+
+    .skills-inline .section-title {
+        font-size: clamp(28px, 7vw, 36px);
+        margin-bottom: 16px;
+    }
+}
+
 .skills-inline .section-title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -75,18 +118,21 @@
 }
 
 .about-visual {
-    position: sticky;
-    top: 100px;
-    height: fit-content;
     position: relative;
+    height: fit-content;
+    padding-top: 60px;
     padding-bottom: 40px;
     padding-right: 40px;
     order: 1;
     min-width: 0;
+    overflow: visible;
 }
 
-#about .card {
-    min-width: 0;
+@media (min-width: 901px) {
+    .about-visual {
+        position: sticky;
+        top: 100px;
+    }
 }
 
 .about-visual .window {
@@ -95,12 +141,12 @@
 
 .about-visual .window-back {
     position: absolute;
-    top: -70px;
-    left: -70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 60px), calc(-50% - 60px)) scale(0.92);
     width: calc(100% - 40px);
     z-index: 1;
     opacity: 0.8;
-    transform: scale(0.92);
     pointer-events: none;
 }
 
@@ -175,15 +221,20 @@
 
 @media (max-width: 900px) {
     .about-visual {
-        position: static;
+        position: relative;
+        padding-top: 40px;
         padding-bottom: 30px;
         padding-right: 30px;
+        overflow: visible;
     }
 
     .about-visual .window-back {
-        top: 30px;
-        left: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50% - 35px), calc(-50% - 35px)) scale(0.92);
         width: calc(100% - 30px);
+        z-index: 1;
     }
 
     .about-photo-container .about-stats {
@@ -192,5 +243,35 @@
 
     .stat-number {
         font-size: clamp(48px, 10vw, 64px);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-visual {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        overflow: visible;
+    }
+
+    .about-visual .window-back {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50% - 20px), calc(-50% - 20px)) scale(0.92);
+        width: calc(100% - 20px);
+        z-index: 1;
+    }
+
+    .about-photo-container .about-stats {
+        padding: 16px;
+    }
+
+    .stat-number {
+        font-size: clamp(40px, 12vw, 56px);
+    }
+
+    .stat-label {
+        font-size: 12px;
     }
 }

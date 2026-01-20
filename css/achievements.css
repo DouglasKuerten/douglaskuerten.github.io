@@ -119,6 +119,7 @@
 
     .achievement-item {
         padding: 24px 0;
+        gap: 16px;
     }
 
     .achievement-title {
@@ -127,5 +128,37 @@
 
     .achievement-period {
         white-space: normal;
+    }
+
+    .achievement-timeline {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #achievements {
+        padding: 48px 0;
+    }
+
+    .achievement-item {
+        padding: 20px 0;
+        gap: 12px;
+    }
+
+    .achievement-title h3 {
+        font-size: clamp(18px, 5vw, 22px);
+    }
+
+    .achievement-content p {
+        font-size: 14px;
+    }
+
+    .achievement-timeline {
+        width: 18px;
+    }
+
+    .achievement-timeline .timeline-dot {
+        width: 10px;
+        height: 10px;
     }
 }
