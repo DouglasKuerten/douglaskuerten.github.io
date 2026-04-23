@@ -45,27 +45,60 @@
 }
 
 .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 16px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.education-title {
+    min-width: 0;
 }
 
 .education-title h3 {
     font-size: clamp(20px, 2vw, 24px);
     font-weight: 700;
     color: var(--text);
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     line-height: 1.2;
     letter-spacing: -.2px;
 }
 
 .education-title .institution {
-    display: inline-block;
-    font-size: 15px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(15px, 1.4vw, 17px);
+    font-weight: 600;
+    letter-spacing: .01em;
+    line-height: 1.35;
+    color: rgba(233, 238, 252, .78);
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+.education-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+    max-width: min(100%, 220px);
+    text-align: right;
+}
+
+.education-period {
+    font-size: 13px;
     color: var(--muted);
-    font-weight: 500;
-    padding: 4px 12px;
-    background: rgba(255, 255, 255, .04);
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 6px 12px;
+    background: rgba(124, 92, 255, .1);
     border-radius: 6px;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(124, 92, 255, .2);
 }
 
 .education-content {
@@ -88,6 +121,10 @@
 
 .education-item:hover .education-title h3 {
     color: rgba(124, 92, 255, .9);
+}
+
+.education-item:hover .education-title .institution {
+    color: rgba(233, 238, 252, .9);
 }
 
 .education-illustration {
@@ -130,6 +167,22 @@
     .education-item {
         padding: 24px 0;
         gap: 16px;
+    }
+
+    .education-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .education-aside {
+        align-items: flex-start;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .education-period {
+        white-space: normal;
+        align-self: flex-start;
     }
 
     .education-timeline {
